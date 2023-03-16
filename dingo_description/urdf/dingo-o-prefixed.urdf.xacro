@@ -432,6 +432,7 @@
 
   <gazebo>
     <plugin name="ground_truth" filename="libgazebo_ros_p3d.so">
+      <robotNamespace>$(arg robot_namespace)</robotNamespace>
       <alwaysOn>true</alwaysOn>
       <!-- <frameName>${robot_prefix}odom</frameName> -->
       <frameName>map</frameName>
@@ -455,8 +456,11 @@
   </gazebo>
 
   <!-- UWB ranging simulation plugin for tag 1 -->
-  <!-- <gazebo>
-    <plugin name='libgtec_uwb_plugin' filename='libgtec_uwb_plugin.so'>
+  <gazebo>
+    <plugin name='libuwb_plugin' filename='libuwb_plugin.so'>
+      <frame_name>map</frame_name>
+      <robot_namespace>$(arg robot_namespace)</robot_namespace> 
+
       <tag_link>${robot_prefix}uwb_tag_1_link</tag_link>
       <tag_id>${uwb_tag_1}</tag_id>
 
@@ -464,21 +468,25 @@
 
       <update_rate>10</update_rate>
       
-      <frequency>3.9936e9</frequency>
-      <power>-14.3</power>
-      <rx_gain>2</rx_gain>
+      <nlosSoftWallWidth>0.10</nlosSoftWallWidth>
+      
+      <tag_z_offset>0.0</tag_z_offset>
 
-      <noise type='gaussian'>
-          <mean>0</mean>
-          <stddev>0.0208</stddev>
-      </noise>
+      <all_los>false</all_los>
+      
+      <topic_name_ranging>uwb/tag_1_ranging</topic_name_ranging>
+
+      <topic_name_anchors>uwb/tag_1_anchors</topic_name_anchors>
 
     </plugin>
-  </gazebo> -->
+  </gazebo>
 
   <!-- UWB ranging simulation plugin for tag 2 -->
-  <!-- <gazebo>
-    <plugin name='libgtec_uwb_plugin' filename='libgtec_uwb_plugin.so'>
+  <gazebo>
+    <plugin name='libuwb_plugin' filename='libuwb_plugin.so'>
+      <frame_name>map</frame_name>
+      <robot_namespace>$(arg robot_namespace)</robot_namespace> 
+
       <tag_link>${robot_prefix}uwb_tag_2_link</tag_link>
       <tag_id>${uwb_tag_2}</tag_id>
 
@@ -486,17 +494,18 @@
 
       <update_rate>10</update_rate>
       
-      <frequency>3.9936e9</frequency>
-      <power>-14.3</power>
-      <rx_gain>2</rx_gain>
+      <nlosSoftWallWidth>0.10</nlosSoftWallWidth>
+      
+      <tag_z_offset>0.0</tag_z_offset>
 
-      <noise type='gaussian'>
-          <mean>0</mean>
-          <stddev>0.0208</stddev>
-      </noise>
+      <all_los>false</all_los>
+      
+      <topic_name_ranging>uwb/tag_2_ranging</topic_name_ranging>
+
+      <topic_name_anchors>uwb/tag_2_anchors</topic_name_anchors>
 
     </plugin>
-  </gazebo> -->
+  </gazebo>
 
   <!-- Optional standard accessories, including their simulation data. The rendering
        of these into the final description is controlled by optenv variables, which
