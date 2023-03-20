@@ -466,15 +466,17 @@
 
       <anchor_prefix>uwb_anchor</anchor_prefix>
 
-      <update_rate>10</update_rate>
+      <update_rate>25</update_rate>
       
-      <nlosSoftWallWidth>0.10</nlosSoftWallWidth>
+      <nlosSoftWallWidth>0.25</nlosSoftWallWidth>
       
       <tag_z_offset>0.0</tag_z_offset>
 
       <all_los>false</all_los>
       
       <topic_name_ranging>uwb/tag_1_ranging</topic_name_ranging>
+
+      <topic_name_serial_ranging>uwb/tag_1_serial_ranging</topic_name_serial_ranging>
 
       <topic_name_anchors>uwb/tag_1_anchors</topic_name_anchors>
 
@@ -492,15 +494,17 @@
 
       <anchor_prefix>uwb_anchor</anchor_prefix>
 
-      <update_rate>10</update_rate>
+      <update_rate>25</update_rate>
       
-      <nlosSoftWallWidth>0.10</nlosSoftWallWidth>
+      <nlosSoftWallWidth>0.25</nlosSoftWallWidth>
       
       <tag_z_offset>0.0</tag_z_offset>
 
       <all_los>false</all_los>
       
       <topic_name_ranging>uwb/tag_2_ranging</topic_name_ranging>
+
+      <topic_name_serial_ranging>uwb/tag_2_serial_ranging</topic_name_serial_ranging>
 
       <topic_name_anchors>uwb/tag_2_anchors</topic_name_anchors>
 
