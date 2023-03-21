@@ -466,9 +466,9 @@
 
       <anchor_prefix>uwb_anchor</anchor_prefix>
 
-      <update_rate>25</update_rate>
+      <update_rate>10</update_rate>
       
-      <nlosSoftWallWidth>0.25</nlosSoftWallWidth>
+      <nlosSoftWallWidth>0.5</nlosSoftWallWidth>
       
       <tag_z_offset>0.0</tag_z_offset>
 
@@ -494,9 +494,9 @@
 
       <anchor_prefix>uwb_anchor</anchor_prefix>
 
-      <update_rate>25</update_rate>
+      <update_rate>10</update_rate>
       
-      <nlosSoftWallWidth>0.25</nlosSoftWallWidth>
+      <nlosSoftWallWidth>0.5</nlosSoftWallWidth>
       
       <tag_z_offset>0.0</tag_z_offset>
 
