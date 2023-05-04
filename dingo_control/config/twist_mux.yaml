@@ -18,5 +18,5 @@ topics:
 locks:
 - name    : e_stop
   topic   : e_stop
-  timeout : 0.0
+  timeout : 0.0 # 0.0 never enters timeout, practically disables the lock
   priority: 255
